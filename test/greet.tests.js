@@ -8,4 +8,11 @@ describe('The greet function', function(){
         // this test will fail - can you fix it?
         assert.equal('Hello, Karen', greet('Karen'));
     });
+
+   it('Should greet Thanduxolo correctly', () => {
+       assert.equal(greet('Thanduxolo'), 'Hello, Thanduxolo');
+   });
+       
+
 });
+
