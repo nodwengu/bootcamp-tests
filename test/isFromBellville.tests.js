@@ -36,5 +36,4 @@ describe('The isFromBellville function', function() {
       assert.equal(isFromBellville(reg), false);
    });
 
-
 });
