@@ -22,7 +22,7 @@ describe('The yearsAgo Function', function() {
     });
 
     it('Should return true if year is not a number', function() {
-        assert.equal(yearsAgo('asasas'), 'Number required');
+        assert.equal(yearsAgo('test'), 'Number required');
     });
 
 });

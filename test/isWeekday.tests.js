@@ -10,16 +10,19 @@
 
 describe('isWeekday function', function() {
     // Expected
-    it('Should return True ', function() {
+    it('Should return True is valid day of the week is input', function() {
         var day = 'Friday';
         assert.equal(isWeekday(day), true);
     });
     
-    it('Should return ', function() {
+    it('Should return true if day is all lower case letters', function() {
         var day = 'friday';
         assert.equal(isWeekday(day), false);
-
     });
-
+    
+    it('Should return a boolean value', function() {
+        var day = 'Friday';
+        assert.isBoolean(isWeekday(day), 'Expeted to return true or false');
+    });
   
 })

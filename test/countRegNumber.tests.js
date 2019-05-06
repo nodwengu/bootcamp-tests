@@ -7,7 +7,7 @@ describe('The countRegNumber function', function() {
         assert.equal('3', countRegNumber(regNumbers));
     });
     // Empty input
-    it('Should return true if entered an empty input', function() {
+    it('Should return true if input is empty', function() {
         var regNumbers = "";
         assert.equal('0', countRegNumber(regNumbers));
     });
@@ -15,4 +15,5 @@ describe('The countRegNumber function', function() {
     it('Should return true if input value is a string', function() {
         assert.typeOf(regNumbers, 'string');
     });
+     
 });

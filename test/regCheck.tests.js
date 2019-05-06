@@ -11,26 +11,24 @@ describe('The regCheck check function', () => {
     it('Should return TRUE if regNumber or location starts with letters', function(){
         let regNum = 'ERT 123 EC';
         let location = 'EC';
-        assert.equal(regCheck(regNum, location), true, 'message');
+        assert.equal(regCheck(regNum, location), true);
     });
 
     it('Indicates failure when regNumber is empty', function() {
         let regNum = '';
         let location = 'EC';
-        assert.equal(regCheck(regNum, location), false, 'message');
+        assert.equal(regCheck(regNum, location), false);
     });
 
     it('Should return TRUE if location is empty', function() {
         let regNum = 'ERT 123 EC';
         let location = '';
-        assert.equal(regCheck(regNum, location), true, 'message');
+        assert.equal(regCheck(regNum, location), true);
     });
 
-    // it('indicates failure when numbers is used instead of strings', function() {
-    //     let regNum = 121212;
-    //     let location = 222;
-    //     assert.equal(regCheck(regNum, location), true, 'message');
-    // });
-
-   
+    it('Should return TRUE if regNumber and location are empty strings', function(){
+        let regNum = '';
+        let location = '';
+        assert.equal(regCheck(regNum, location), true);
+    });
 });

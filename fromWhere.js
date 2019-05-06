@@ -6,8 +6,8 @@ function fromWhere(regNumber) {
     } else if(regNumber.startsWith('CA')) {
     	return "Cape Town";
     } else {
-    	return "Some other place!";
+    	return "invalid input";
     }
 }
 
-console.log(fromWhere("V12211"));
+// console.log(fromWhere("V12211"));
