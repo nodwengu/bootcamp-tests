@@ -1,16 +1,16 @@
 
 describe('The greet function', function(){
 
-    it('should greet Andrew correctly', function(){
+    it('It should return "Hello, Andrew" when Andrew is greeted', function(){
         assert.equal('Hello, Andrew', greet('Andrew'));
     });
 
-    it('should greet Karen correctly', function(){
+    it('It should return "Hello, Karen" when Karen is greeted', function(){
         // this test will fail - can you fix it?
         assert.equal('Hello, Karen', greet('Karen'));
     });
 
-   it('Should greet Thanduxolo correctly', () => {
+   it('It should return "Hello, Thanduxolo" when Thanduxolo is greeted', () => {
        assert.equal(greet('Thanduxolo'), 'Hello, Thanduxolo');
    });
        

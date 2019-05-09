@@ -1,15 +1,7 @@
 describe('The regCheck check function', () => {
-    // Function takes 2 args regNumber & Location (EC or GP for axample)
-   
-    // First test for regNumber then Location
-    // check for the expected input for reg number
-    // check for an empty input
-    // check for non-text input
-    // check for lower-case input
-    // check for mixed-case input 
     
     it('Should return TRUE if regNumber or location starts with letters', function(){
-        let regNum = 'ERT 123 EC';
+        let regNum = 'CA 123 EC';
         let location = 'EC';
         assert.equal(regCheck(regNum, location), true);
     });
@@ -30,5 +22,17 @@ describe('The regCheck check function', () => {
         let regNum = '';
         let location = '';
         assert.equal(regCheck(regNum, location), true);
+    });
+
+    it('Indicates failure when regNumber is invalid input', function() {
+        let regNum = '@34ggfcgfg';
+        let location = 'EC';
+        assert.equal(regCheck(regNum, location), false);
+    });
+
+    it('Indicates failure when location is invalid input', function() {
+        let regNum = 'CA 123 EC';
+        let location = '@34ggfcgfg';
+        assert.equal(regCheck(regNum, location), false);
     });
 });
