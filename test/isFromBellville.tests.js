@@ -8,8 +8,8 @@ describe('The isFromBellville function', function() {
    });
 
    //Error path
-   it('Should return false if Reg DOES NOT starts with CY', function() {
-      var reg = 'CJ 123';
+   it('Should return false if Reg does not start with CY', function() {
+      var reg = 'CA 123';
       assert.equal(isFromBellville(reg), false);
    });
 
@@ -31,14 +31,14 @@ describe('The isFromBellville function', function() {
    });
 
    //what if the input is empty
-   it('Should return false if reg is empty.', function() {
+   it('Should return false if reg is an empty string.', function() {
       var reg = '';
       assert.equal(isFromBellville(reg), false);
    });
 
    //what if wrong string is passed
-   it('Should return false if wrong string is passed', function() {
-      var reg = 'ewewrwr';
+   it('Should return false if invalid string is passed as input', function() {
+      var reg = '@$rtrtrs';
       assert.equal(isFromBellville(reg), false);
    });
 

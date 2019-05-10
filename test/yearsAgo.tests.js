@@ -1,27 +1,22 @@
-// Testing current year (2019) expecting 0
-// Teting the previous year expecting 1
-// Testing year in the future expecting -ve output
-// Teting the negative input (-2020) result (4039)
-// Testing for the string input expecting strange results
 
 describe('The yearsAgo Function', function() {
-    it('Should return true if current year is input.', function() {
-        assert.equal(yearsAgo(2019), 0);
+    it('Should return zero "0" if current year (2019) is passed as input.', function() {
+        assert.deepEqual(yearsAgo(2019), 0);
     });
 
-    it('Should return true if previous year is input.', function() {
+    it('Should return 1 if previous year (2018) is passed as input.', function() {
         assert.equal(yearsAgo(2018), 1);
     });
 
-    it('Should return true if year in the future is input.', function() {
+    it('Should return -6 if year (2025) passed as input is in the future.', function() {
         assert.equal(yearsAgo(2025), -6);
     });
 
-    it('Should return true if year is negative input.', function() {
+    it('Should return 4039 if year (-2020) passed as input is a negative number.', function() {
         assert.equal(yearsAgo(-2020), 4039);
     });
 
-    it('Should return true if year is not a number', function() {
+    it('Should return "Number required" error message if input is not a number', function() {
         assert.equal(yearsAgo('test'), 'Number required');
     });
 
