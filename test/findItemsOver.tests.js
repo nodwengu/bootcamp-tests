@@ -8,7 +8,11 @@ describe('The findItemsOver Function', function() {
         assert.deepEqual(result, expectedResult);
     });
 
-    it('findItemsOver should return an array', function() {
+    it('Should return false when an invalid data is provided as input', function() {
+        assert.equal(findItemsOver('@#$%%^^^', entry), false);
+    });
+
+    it('findItemsOver should return an output of type array', function() {
         var result = findItemsOver(items, entry);
         assert.typeOf(result, 'array');
     });
@@ -21,12 +25,4 @@ describe('The findItemsOver Function', function() {
         assert.isNumber(entry, 'Expecting the number as the second parameter');
     });
 
-    // it('findItemsOver20 should true if input is undefined', function() {
-    //     var items = [{"name":"apples","qty":10},{"name":"pears","qty":37},{"name":"bananas","qty":27},{"name":"apples","qty":3}]
-    //     var result = findItemsOver20(items);
-    //     var expectedResult = [{"name":"pears","qty":37},{"name":"bananas","qty":27}];
-    //     assert.equal(result, expectedResult);
-    // });    
-
-    
 });

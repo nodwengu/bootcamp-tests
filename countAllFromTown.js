@@ -13,4 +13,4 @@ function countAllFromTown(regNumbers, startStr) {
   	return counter;
 }
 
-alert(countAllFromTown('CL 124,CY 567,CL 345,CJ 456,CL 341', 'CL'));
+// alert(countAllFromTown('CL 124,CY 567,CL 345,CJ 456,CL 341', 'CL'));
